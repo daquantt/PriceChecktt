@@ -6,7 +6,7 @@
     <div class="card">
         <div class="card-header text-center">
             <h3 class="float-start pt-1 mb-0">Dashboard</h3> 
-            <span><a href="/posts/create" class="btn btn-success btn-sm mr-2 px-4 text-center fs-6">Create Post</a></span>
+            <span><a href="/posts/create" class="btn btn-success btn-sm mr-2 px-3 text-center fs-6">Create Post</a></span>
             <span class="float-end pt-1 mb-0">Points: {{ Auth::user()->points }}</span>        
         </div>
 
@@ -18,7 +18,7 @@
                 @endif
 
                 
-                <h5 class=" float-start mt-2">Your Posts</h5>
+                <h5 class=" float-start mt-2 pe-2">Your Posts</h5>
                 <div class="row justify-content-end">
                     <form action="/dashsearch" method="GET" class="col-sm-6 p-0">
                         <div class="input-group">
@@ -27,7 +27,7 @@
                         </div>
                     </form>
                 </div>
-                
+
                 @if(count($posts) > 0)
                     <div class="card p-md-2 mt-3 mb-3 table-responsive">
                     <table class="table table-sm table-striped table-hover text-nowrap">
@@ -35,10 +35,10 @@
                             <th class="text-center">Date of Price</th>
                             <th>Item</th>
                             <th class="text-end">Price</th>
-                            <th class="text-center d-none d-md-table-cell">Brand</th>
+                            <th class="text-center">Brand</th>
                             <th class="text-center">Size/Qty</th>
                             <th class="text-center">Vendor</th>
-                            <th class="text-center d-none d-md-table-cell">Location</th>
+                            <th class="text-center">Location</th>
                             <th class="text-center">Edit/Delete</th>
                         </tr>
                         @foreach ($posts as $post)                                         
@@ -46,10 +46,10 @@
                                 <td class="text-center">{{$post->price_date}}</td>
                                 <td>{{$post->title}}</td>
                                 <td class="text-end">{{number_format($post->price, 2, '.', ',')}}</td>
-                                <td class="text-center d-none d-md-table-cell">{{$post->brand}}</td>
+                                <td class="text-center">{{$post->brand}}</td>
                                 <td class="text-center">{{$post->size}}</td>
                                 <td class="text-center">{{$post->vendor}}</td>
-                                <td class="text-center d-none d-md-table-cell">{{$post->location}}</td>                                                       
+                                <td class="text-center">{{$post->location}}</td>                                                       
                                 <td class="text-center">
                                     <div class="btn-group" role="group">
                                         <a href="/posts/{{$post->id}}/edit" class="btn btn-info btn-sm py-0 px-3 text-light">Edit</a>

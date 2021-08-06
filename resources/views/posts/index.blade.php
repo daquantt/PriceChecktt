@@ -29,8 +29,7 @@
                 </tr>
                 @foreach ($posts as $post)                                         
                     <tr>
-                        <td class="text-center">{{$post->price_date}}</td>
-                        
+                        <td class="text-center">{{$post->price_date}}</td>                        
                         <td>
                             <strong><a href="/posts/{{$post->id}}">{{$post->title}}</a></strong>
                             <span class="badge rounded-pill bg-info"><span>{{ $post->likes->count() }}</span></span>

@@ -3,6 +3,18 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Search, compare and track prices of goods and services in Trinidad & Tobago. Upload your prices and earn points. Know a price is right? Verify it by giving it a like for other users to know.">
+    <meta name="keywords" content="PriceCheck, Trinidad, Tobago, Price, Prices, Cost, Costs, Goods, Services, Check, Verify, Search, Find, Compare, Track, Vendor, Upload, Consumer">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6NS98YHVSG"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-6NS98YHVSG');
+    </script>
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -25,7 +37,7 @@
     <div id="app">
         @include('inc.navbar')
 
-        <div class="container-md">
+        <div class="container-lg">
             @include('inc.messages')
             @yield('content')            
 
