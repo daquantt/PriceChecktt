@@ -4,9 +4,13 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\User;
+
 
 class Post extends Model
 {
+    use HasFactory;
+    
     // By default table name is plural of class above ie posts. If you want to change the Table Name 
     protected $table = 'posts';
     // if you want to change the Primary Key
@@ -14,10 +18,24 @@ class Post extends Model
     // if you want timestamps for records (its there by default)
     public $timestamps = true;
 
+    
+    //checks if user already liked post        
+    public function likedBy()
+    {
+        return $this->likes()->where('user_id', auth()->id())->exists();
+    }
+    
+
     public function user()
     {
         return $this->belongsTo('App\Models\User');
     }
+    
+    
+    public function likes()
+    {
+        return $this->hasMany('App\Models\Like');
+    }
 
-    use HasFactory;
+
 }
