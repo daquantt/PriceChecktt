@@ -44,13 +44,13 @@
                             @if (!$post->likedBy(auth()->user()))
                                 <form action="{{ route('posts.likes', $post) }}" method="post" class="me-1">
                                     @csrf
-                                    <button type="submit" class="btn btn-none btn-sm p-0"><i class="bi bi-hand-thumbs-up-fill text-info h5"></i></button>
+                                    <button type="submit" class="btn btn-none btn-sm p-0"><i class="bi bi-shield-check text-primary h5"></i></button>
                                 </form>
                             @else
                                 <form action="{{ route('posts.likes', $post) }}" method="post" class="me-1">
                                     @csrf
                                     @method('DELETE')
-                                    <button type="submit" class="btn btn-none btn-sm p-0"><i class="bi bi-hand-thumbs-down-fill text-info h5 p-0"></i></button>
+                                    <button type="submit" class="btn btn-none btn-sm p-0"><i class="bi bi-shield-fill-check text-primary h5 p-0"></i></button>
                                 </form>
                             @endif                            
                         </td>

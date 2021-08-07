@@ -39,7 +39,7 @@
         <span class="col-8 col-md-10">{{$post->comment}}</span>
     </div>
     <br>
-    <small>Created on {{$post->created_at}} by {{$post->user->name}}</small>
+    <small>Created on {{$post->created_at}} by {{$post->user->username}}</small>
     <hr>
     
     <a href="/posts" class="btn btn-secondary" >Go Back</a>
