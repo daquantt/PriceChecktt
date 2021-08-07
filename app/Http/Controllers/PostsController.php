@@ -51,9 +51,9 @@ class PostsController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'title' => ['required', 'max:25'],
+            'title' => ['required'],
             'vendor' => 'required',
-            'price' => 'required',
+            'price' => 'required|numeric',
             'price_date' => 'required'
         ]);
 

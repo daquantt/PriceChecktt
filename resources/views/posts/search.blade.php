@@ -30,26 +30,25 @@
                 @foreach ($posts as $post)                                         
                     <tr>
                         <td class="text-center">{{$post->price_date}}</td>                        
-                        <td>
-                            <strong><a href="/posts/{{$post->id}}">{{$post->title}}</a></strong>
-                            <span class="badge rounded-pill bg-info"><span>{{ $post->likes->count() }}</span></span>
-                        </td>
+                        <td><strong><a href="/posts/{{$post->id}}">{{$post->title}}</a></strong></td>
                         <td class="text-end">{{number_format($post->price, 2, '.', ',')}}</td>                        
                         <td class="text-center d-none d-sm-table-cell">{{$post->brand}}</td>
                         <td class="text-center d-none d-sm-table-cell">{{$post->size}}</td>
                         <td class="text-center d-none d-sm-table-cell">{{$post->vendor}}</td>
                         <td class="text-center d-none d-sm-table-cell">{{$post->location}}</td>
-                        <td class="text-center">                                                        
+                        <td class="text-center position-relative">  
+                            {{-- <span class="badge rounded-pill bg-info align-self-center"><span>{{ $post->likes->count() }}</span></span> --}}
+                            <span class="position-absolute ms-2 top-25 start-50 translate-middle badge rounded-pill bg-info"><span>{{ $post->likes->count() }}</span></span>                                                      
                             @if (!$post->likedBy(auth()->user()))
-                                <form action="{{ route('posts.likes', $post) }}" method="post" class="me-1">
+                                <form action="{{ route('posts.likes', $post) }}" method="post" class="me-2">
                                     @csrf
-                                    <button type="submit" class="btn btn-none btn-sm p-0"><i class="bi bi-hand-thumbs-up-fill text-info h5"></i></button>
+                                    <button type="submit" class="btn btn-none btn-sm p-0"><i class="bi bi-shield-check text-primary h5"></i></button>
                                 </form>
                             @else
-                                <form action="{{ route('posts.likes', $post) }}" method="post" class="me-1">
+                                <form action="{{ route('posts.likes', $post) }}" method="post" class="me-2">
                                     @csrf
                                     @method('DELETE')
-                                    <button type="submit" class="btn btn-none btn-sm p-0"><i class="bi bi-hand-thumbs-down-fill text-info h5 p-0"></i></button>
+                                    <button type="submit" class="btn btn-none btn-sm p-0"><i class="bi bi-shield-fill-check text-primary h5"></i></button>
                                 </form>
                             @endif                            
                         </td>
