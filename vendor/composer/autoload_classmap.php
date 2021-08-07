@@ -3288,5 +3288,8 @@ return array(
     'Webmozart\\Assert\\Assert' => $vendorDir . '/webmozart/assert/src/Assert.php',
     'Webmozart\\Assert\\InvalidArgumentException' => $vendorDir . '/webmozart/assert/src/InvalidArgumentException.php',
     'Webmozart\\Assert\\Mixin' => $vendorDir . '/webmozart/assert/src/Mixin.php',
+    'andcarpi\\Popper\\Facades\\Popper' => $vendorDir . '/andcarpi/laravel-popper/src/Facades/Popper.php',
+    'andcarpi\\Popper\\Popper' => $vendorDir . '/andcarpi/laravel-popper/src/Popper.php',
+    'andcarpi\\Popper\\PopperServiceProvider' => $vendorDir . '/andcarpi/laravel-popper/src/PopperServiceProvider.php',
     'voku\\helper\\ASCII' => $vendorDir . '/voku/portable-ascii/src/voku/helper/ASCII.php',
 );

@@ -6,12 +6,12 @@
     
     {!! Form::open(['action' => 'App\Http\Controllers\PostsController@store', 'method' => 'POST']) !!}
         
-        <div class="input-group">
+        <div class="input-group" @popper(Date item was purchased)>
             {{Form::label('date', 'Date of Price*', ['class' => 'input-group-text col-sm-2 mb-2 justify-content-end'])}}
             {{Form::date('price_date', '', ['class' => 'form-control mb-2', 'placeholder' => 'Date of Price'])}}
         </div>
         <div class="input-group">
-            {{Form::label('title', 'Product*', ['class' => 'input-group-text col-sm-2 mb-2 justify-content-end'])}}
+            {{Form::label('title', 'Item*', ['class' => 'input-group-text col-sm-2 mb-2 justify-content-end'])}}
             {{Form::text('title', '', ['class' => 'form-control mb-2', 'maxlength' => '30', 'placeholder' => 'Product'])}}
         </div>
         <div class="input-group">
@@ -30,7 +30,7 @@
             {{Form::label('vendor', 'Vendor*', ['class' => 'input-group-text col-sm-2 mb-2 justify-content-end'])}}
             {{Form::text('vendor', '', ['class' => 'form-control mb-2', 'maxlength' => '20', 'placeholder' => 'Vendor'])}}
         </div>
-        <div class="input-group">
+        <div class="input-group" @popper(General location of vendor eg. Port of Spain)>
             {{Form::label('location', 'Location', ['class' => 'input-group-text col-sm-2 mb-2 justify-content-end'])}}
             {{Form::text('location', '', ['class' => 'form-control mb-2', 'maxlength' => '20', 'placeholder' => 'Location'])}}
         </div>

@@ -40,6 +40,7 @@
         <div class="container-lg">
             @include('inc.messages')
             @yield('content')            
+            @include('popper::assets')
 
         </div>
     </div>

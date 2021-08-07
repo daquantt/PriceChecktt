@@ -39,6 +39,10 @@ class ComposerStaticInitba19ee7942de3aa5890754b371e45876
         array (
             'voku\\' => 5,
         ),
+        'a' => 
+        array (
+            'andcarpi\\Popper\\' => 16,
+        ),
         'W' => 
         array (
             'Webmozart\\Assert\\' => 17,
@@ -162,6 +166,10 @@ class ComposerStaticInitba19ee7942de3aa5890754b371e45876
         'voku\\' => 
         array (
             0 => __DIR__ . '/..' . '/voku/portable-ascii/src/voku',
+        ),
+        'andcarpi\\Popper\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/andcarpi/laravel-popper/src',
         ),
         'Webmozart\\Assert\\' => 
         array (
@@ -3726,6 +3734,9 @@ class ComposerStaticInitba19ee7942de3aa5890754b371e45876
         'Webmozart\\Assert\\Assert' => __DIR__ . '/..' . '/webmozart/assert/src/Assert.php',
         'Webmozart\\Assert\\InvalidArgumentException' => __DIR__ . '/..' . '/webmozart/assert/src/InvalidArgumentException.php',
         'Webmozart\\Assert\\Mixin' => __DIR__ . '/..' . '/webmozart/assert/src/Mixin.php',
+        'andcarpi\\Popper\\Facades\\Popper' => __DIR__ . '/..' . '/andcarpi/laravel-popper/src/Facades/Popper.php',
+        'andcarpi\\Popper\\Popper' => __DIR__ . '/..' . '/andcarpi/laravel-popper/src/Popper.php',
+        'andcarpi\\Popper\\PopperServiceProvider' => __DIR__ . '/..' . '/andcarpi/laravel-popper/src/PopperServiceProvider.php',
         'voku\\helper\\ASCII' => __DIR__ . '/..' . '/voku/portable-ascii/src/voku/helper/ASCII.php',
     );
 

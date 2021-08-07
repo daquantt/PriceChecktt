@@ -25,16 +25,25 @@ class InstalledVersions
 private static $installed = array (
   'root' => 
   array (
-    'pretty_version' => 'dev-master',
-    'version' => 'dev-master',
+    'pretty_version' => 'dev-main',
+    'version' => 'dev-main',
     'aliases' => 
     array (
     ),
-    'reference' => '25a90795dc84ed8b24977b41932f69b9d788cd74',
+    'reference' => 'e526ed8bec753efda894766992b434abf9a8c443',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
   array (
+    'andcarpi/laravel-popper' => 
+    array (
+      'pretty_version' => '0.9.4',
+      'version' => '0.9.4.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'fd01cbc60a62acd71ff4205ae7a03820b1a9951c',
+    ),
     'asm89/stack-cors' => 
     array (
       'pretty_version' => 'v2.0.3',
@@ -380,12 +389,12 @@ private static $installed = array (
     ),
     'laravel/laravel' => 
     array (
-      'pretty_version' => 'dev-master',
-      'version' => 'dev-master',
+      'pretty_version' => 'dev-main',
+      'version' => 'dev-main',
       'aliases' => 
       array (
       ),
-      'reference' => '25a90795dc84ed8b24977b41932f69b9d788cd74',
+      'reference' => 'e526ed8bec753efda894766992b434abf9a8c443',
     ),
     'laravel/tinker' => 
     array (
