@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Search, compare and track prices of goods and services in Trinidad & Tobago. Upload your prices and earn points. Know a price is right? Verify it by giving it a like for other users to know.">
     <meta name="keywords" content="PriceCheck, Trinidad, Tobago, Price, Prices, Cost, Costs, Goods, Services, Check, Verify, Search, Find, Compare, Track, Vendor, Upload, Consumer">
-
+    <link rel="icon" href="{{ asset('images/favicon.ico') }}">
+    
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-6NS98YHVSG"></script>
     <script>

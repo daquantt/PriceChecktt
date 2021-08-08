@@ -14,7 +14,7 @@
             {{Form::label('title', 'Item*', ['class' => 'input-group-text col-sm-2 mb-2 justify-content-end'])}}
             {{Form::text('title', '', ['class' => 'form-control mb-2', 'maxlength' => '30', 'placeholder' => 'Product'])}}
         </div>
-        <div class="input-group">
+        <div class="input-group" @popper(Numeric values only)>
             {{Form::label('price', 'Price*', ['class' => 'input-group-text col-sm-2 mb-2 justify-content-end'])}}
             {{Form::text('price', '', ['class' => 'form-control mb-2', 'maxlength' => '12', 'placeholder' => 'Price'])}}
         </div>

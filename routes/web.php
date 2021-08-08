@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Foundation\Auth\EmailVerificationRequest;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,10 +25,11 @@ Route::resource('posts', 'App\Http\Controllers\PostsController');
 Route::get('/search', [App\Http\Controllers\PostsController::class, 'search']);
 Route::get('/dashsearch', [App\Http\Controllers\DashboardController::class, 'search']);
 
-Auth::routes();
+Auth::routes(['verify' => true]);
 
-Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
+Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard')->middleware(['verified']);
 
 Route::post('/posts/{post}/likes', [App\Http\Controllers\PostLikeController::class, 'store'])->name('posts.likes');
 Route::delete('/posts/{post}/likes', [App\Http\Controllers\PostLikeController::class, 'destroy'])->name('posts.likes');
 
+//email verification notice
