@@ -13,7 +13,7 @@
         </form>
     </div>
     
-    <small class="d-sm-none">Rotate mobile screens for full details</small>
+    <small class="d-sm-none">Rotate mobile devices for full details</small>
     @if(count($posts) > 0)
         <div class="card p-md-3 my-1 table-responsive">
             <table class="table table-sm table-striped align-middle table-hover text-nowrap">
@@ -25,7 +25,7 @@
                     <th class="text-center d-none d-sm-table-cell">Size/Qty</th>
                     <th class="text-center d-none d-sm-table-cell">Vendor</th>
                     <th class="text-center d-none d-sm-table-cell">Location</th>
-                    <th class="text-center p-0">Like</th>
+                    <th class="text-center p-0">Likes</th>
                 </tr>
                 @foreach ($posts as $post)                                         
                     <tr>
@@ -36,11 +36,19 @@
                         <td class="text-center d-none d-sm-table-cell">{{$post->size}}</td>
                         <td class="text-center d-none d-sm-table-cell">{{$post->vendor}}</td>
                         <td class="text-center d-none d-sm-table-cell">{{$post->location}}</td>
-                        <td class="text-center position-relative" @popper(Click to like/unlike)>  
+                        <td class="text-center position-relative">  
                             {{-- <span class="badge rounded-pill bg-info align-self-center"><span>{{ $post->likes->count() }}</span></span> --}}
-                            <span class="position-absolute ms-2 top-25 start-50 translate-middle badge rounded-pill bg-info"><span>{{ $post->likes->count() }}</span></span>                                                      
+                            @guest
+                                <span class="position-absolute ms-2 top-25 start-50 translate-middle badge rounded-pill bg-info" ><span>{{ $post->likes->count() }}</span></span>
+                                <form action="#" method="" class="me-2" @popper(Log in to like)>
+                                    @csrf
+                                    <button type="submit" class="btn btn-none btn-sm p-0"><i class="bi bi-shield-check text-primary h5"></i></button>
+                                </form>
+                            @else
+                            
+                            <span class="position-absolute ms-2 top-25 start-50 translate-middle badge rounded-pill bg-info"><span>{{ $post->likes->count() }}</span></span>                                                                                 
                             @if (!$post->likedBy(auth()->user()))
-                                <form action="{{ route('posts.likes', $post) }}" method="post" class="me-2">
+                                <form action="{{ route('posts.likes', $post) }}" method="post" class="me-2" @popper(Click to like)>
                                     @csrf
                                     <button type="submit" class="btn btn-none btn-sm p-0"><i class="bi bi-hand-thumbs-up text-primary h5"></i></button>
                                 </form>
@@ -50,7 +58,8 @@
                                     @method('DELETE')
                                     <button type="submit" class="btn btn-none btn-sm p-0"><i class="bi bi-hand-thumbs-up-fill text-primary h5"></i></button>
                                 </form>
-                            @endif                            
+                            @endif      
+                            @endguest
                         </td>
                     </tr>
                 @endforeach
@@ -60,9 +69,7 @@
         {{$posts->links()}}
     @else
         <p>No posts found</p>
-    @endif
-
-    
+    @endif    
 
 @endsection
 

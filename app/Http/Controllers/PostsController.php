@@ -28,7 +28,7 @@ class PostsController extends Controller
         //$posts = Post::orderBy('created_at','desc')->get();
         //$posts = Post::orderBy('created_at','desc')->take(10)->get();
         //take(10) only pulls 10 posts
-        $posts = Post::orderBy('price_date', 'desc')->paginate(20);
+        $posts = Post::with(['user', 'likes'])->orderBy('price_date', 'desc')->paginate(25);
         return view('posts.index')->with('posts', $posts);
     }
 
@@ -113,7 +113,7 @@ class PostsController extends Controller
     public function search(Request $request)
     {
         $search = $request->get('search');
-        $posts = Post::where('title', 'LIKE', '%' . $search . '%')->paginate(20);
+        $posts = Post::where('title', 'LIKE', '%' . $search . '%')->paginate(25);
 
         return view('posts.search')->with('posts', $posts);
     }

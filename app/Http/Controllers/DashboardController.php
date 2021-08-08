@@ -43,7 +43,7 @@ class DashboardController extends Controller
     public function search(Request $request)
     {
         $search = $request->get('search');
-        $posts = Post::where('title', 'LIKE', '%' . $search . '%')->paginate(20);
+        $posts = Post::where('title', 'LIKE', '%' . $search . '%')->paginate(25);
 
         return view('dashboard')->with('posts', $posts);
     }

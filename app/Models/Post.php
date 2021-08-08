@@ -20,9 +20,10 @@ class Post extends Model
 
     
     //checks if user already liked post        
-    public function likedBy()
+    public function likedBy(User $user)
     {
-        return $this->likes()->where('user_id', auth()->id())->exists();
+        // return $this->likes()->where('user_id', auth()->id())->exists();
+        return $this->likes->contains('user_id', $user->id);
     }
     
 
