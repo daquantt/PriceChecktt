@@ -4,8 +4,11 @@
     <br>
     <h3 class="text-center">Search Products</h3>
     
-    <div class="row my-3 justify-content-center">
-        <form action="/search" method="GET" class="col-sm-6">
+    <div class="d-flex align-items-center mb-3">
+        @auth
+            <div><a href="/posts/create" class="btn btn-success btn px-2 text-center fs-6 me-auto">New Post</a></div>
+        @endauth
+        <form action="/search" method="GET" class="ms-auto col-8 col-sm-4">
             <div class="input-group">
                 <input name="search" class="form-control" type="search" placeholder="Search Products" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Search</button>

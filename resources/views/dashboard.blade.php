@@ -4,10 +4,9 @@
 
     <br>    
     <div class="card">
-        <div class="card-header text-center">
-            <h3 class="float-start pt-1 mb-0">Dashboard</h3> 
-            <span><a href="/posts/create" class="btn btn-success btn-sm mr-2 px-3 text-center fs-6">Create Post</a></span>
-            <span class="float-end pt-1 mb-0">Points: {{ Auth::user()->points }}</span>        
+        <div class="card-header d-flex justify-content-between">
+            <h3 class="pt-1 mb-0">Dashboard</h3>            
+            <span class="pt-1 mb-0">Points: {{ Auth::user()->points }}</span>        
         </div>
 
             <div class="card-body px-3">
@@ -16,11 +15,10 @@
                         {{ session('status') }}
                     </div>
                 @endif
-
                 
-                <h5 class=" float-start mt-2 pe-2">Your Posts</h5>
-                <div class="row justify-content-end">
-                    <form action="/dashsearch" method="GET" class="col-sm-6 p-0">
+                <div class="d-flex align-items-center">
+                    <div><a href="/posts/create" class="btn btn-success btn me-auto px-2 text-center fs-6">New Post</a></div>
+                    <form action="/dashsearch" method="GET" class="ms-auto col-8 col-sm-4 p-0">
                         <div class="input-group">
                             <input name="search" class="form-control" type="search" placeholder="Search posts" aria-label="Search">
                             <button class="btn btn-outline-success" type="submit">Search</button>

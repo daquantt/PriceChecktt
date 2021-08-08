@@ -16,7 +16,7 @@
             @foreach ($users as $user)                                         
                 <tr>
                     <td class="text-center">{{$no++}}</td>
-                    <td class="text-center">{{$user->name}}</td>
+                    <td class="text-center">{{$user->username}}</td>
                     <td class="text-center">{{$user->points}}</td>
                     <td class="text-center">{{$user->created_at->format('Y-m-d')}}</td>
 

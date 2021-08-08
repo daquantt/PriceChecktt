@@ -28,7 +28,7 @@ class PostsController extends Controller
         //$posts = Post::orderBy('created_at','desc')->get();
         //$posts = Post::orderBy('created_at','desc')->take(10)->get();
         //take(10) only pulls 10 posts
-        $posts = Post::with(['user', 'likes'])->orderBy('price_date', 'desc')->paginate(25);
+        $posts = Post::with(['user', 'likes'])->orderBy('price_date', 'desc')->paginate(5);
         return view('posts.index')->with('posts', $posts);
     }
 
@@ -94,7 +94,7 @@ class PostsController extends Controller
         $request->user()->points += $points;
         $request->user()->save();
 
-        return redirect('/dashboard')->with('success', 'Post Created - You earned ' . $points . ' points');
+        return redirect('/posts/create')->with('success', 'Post Created - You earned ' . $points . ' points');
     }
 
     /**
