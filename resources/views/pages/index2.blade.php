@@ -8,10 +8,7 @@
         <br>
         
         <h4>Register now and start uploading prices!</h4>
-        <br>
         <a class="btn btn-success btn-lg" href="/register" role="button">Register</a>
-    </div>    
-        
         <br><br>
         <div class="row my-3 justify-content-center">
             <form action="/search" method="GET" class="col-sm-6">
@@ -21,5 +18,5 @@
                 </div>
             </form>
         </div>
-    
+    </div>
 @endsection

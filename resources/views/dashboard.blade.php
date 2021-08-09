@@ -92,7 +92,7 @@
                     </div>
                     {{$posts->links()}}    
                 @else   
-                    <p>You have no Posts</p>
+                    <p class="text-center mt-3">No posts found</p>
                 @endif   
             </div>
     </div>           

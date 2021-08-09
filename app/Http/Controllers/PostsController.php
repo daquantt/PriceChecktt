@@ -28,7 +28,7 @@ class PostsController extends Controller
         //$posts = Post::orderBy('created_at','desc')->get();
         //$posts = Post::orderBy('created_at','desc')->take(10)->get();
         //take(10) only pulls 10 posts
-        $posts = Post::with(['user', 'likes'])->orderBy('price_date', 'desc')->paginate(5);
+        $posts = Post::with(['user', 'likes'])->orderBy('price_date', 'desc')->paginate(25);
         return view('posts.index')->with('posts', $posts);
     }
 

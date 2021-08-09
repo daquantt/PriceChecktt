@@ -71,7 +71,7 @@
         {{$posts->links()}}
 
     @else
-        <p>No posts found</p>
+        <p class="text-center mt-3">No posts found</p>
     @endif
  
 @endsection
