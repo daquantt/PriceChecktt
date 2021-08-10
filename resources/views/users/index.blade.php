@@ -4,7 +4,7 @@
     <br>    
     <div class="d-flex mb-3 align-items-end">        
         <h2 class="text-center mb-0">{{$user->username}} posts</h2>
-        <div class="ms-auto">Posts: {{ $posts->count() }} | Likes received: {{ $user->receivedLikes()->count() }}</div>        
+        <div class="ms-auto">Posts: {{ $user->posts()->count() }} | Likes received: {{ $user->receivedLikes()->count() }}</div>        
     </div>
        
     <small class="d-sm-none">Rotate mobile devices for full details</small>
