@@ -8,11 +8,11 @@
                         <li class="list-group-item"><span class="h4">We are powered by you! Join our community and start uploading now!</span></li>
                         <li class="list-group-item"><div class="h4 fw-bold mb-2">Users</div>
                                 <ul>                              
-                                        <div class="fs-5 mb-1"><i class="bi bi-search h4"></i> Search for prices of goods and services</div>                                        
-                                        <div class="fs-5 mb-1"><i class="bi bi-card-checklist h4"></i> Compare prices of products</div>
+                                        <div class="fs-5 mb-1"><i class="bi bi-search h4"></i> Search for prices of goods and services</div>
+                                        <div class="fs-5 mb-1"><i class="bi bi-card-checklist h4"></i> Compare prices of goods and services</div>
                                         <div class="fs-5 mb-1"><i class="bi bi-people h4"></i> Compare prices of vendors</div>
                                         <div class="fs-5 mb-1"><i class="bi bi-graph-up h4"></i> Track the fluctuation of prices over time</div>
-                                        <div class="fs-5 mb-1"><i class="bi bi-hand-thumbs-up h4"></i> Like posts if you can confirm prices as this will let other users know the price is right</div>
+                                        <div class="fs-5 mb-1"><i class="bi bi-hand-thumbs-up h4"></i> Like posts to let other users know the price is right</div>
                                 </ul>
                         </li>
                         <li class="list-group-item"><div class="h4 fw-bold mb-2">Consumers</div> 

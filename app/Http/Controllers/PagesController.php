@@ -30,12 +30,4 @@ class PagesController extends Controller
         return view('pages.points')->with('title', $title);
     }
 
-    public function rank()
-    {
-        $title = 'Scoreboard';
-        $users = User::orderBy('points', 'desc')->paginate(100);
-        return view('pages.rank')
-            ->with('title', $title)
-            ->with(['users' => $users, 'no' => 1]);
-    }
 }

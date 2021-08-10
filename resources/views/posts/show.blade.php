@@ -39,10 +39,10 @@
         <span class="col-8 col-md-10">{{$post->comment}}</span>
     </div>
     <br>
-    <small>Created on {{$post->created_at}} by {{$post->user->username}}</small>
+    <small>Created on {{$post->created_at}} by <a href="{{ route('users.posts', $post->user) }}">{{$post->user->username}}</a></small>
     <hr>
     
-    <a href="/posts" class="btn btn-secondary" >Go Back</a>
+    <a href="{{ url()->previous() }}" class="btn btn-secondary" >Go Back</a>
     
     <!-- if statement Blocks guests from seeing edit/delete buttons -->
     @if (!Auth::guest()) 

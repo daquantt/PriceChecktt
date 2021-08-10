@@ -147,7 +147,7 @@ class PostsController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request, [
-            'title' => ['required', 'max:25'],
+            'title' => ['required', 'max:30'],
             'vendor' => 'required',
             'price' => 'required',
             'price_date' => 'required'
