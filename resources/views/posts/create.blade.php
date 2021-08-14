@@ -15,10 +15,6 @@
                 {{Form::label('title', 'Item*', ['class' => 'input-group-text col-sm-3 mb-2'])}}
                 {{Form::text('title', '', ['class' => 'form-control mb-2', 'maxlength' => '30', 'placeholder' => 'Product'])}}
             </div>
-            <div class="input-group")>
-                {{Form::label('price', 'Price*', ['class' => 'input-group-text col-sm-3 mb-2'])}}
-                {{Form::text('price', '', ['class' => 'form-control mb-2 col col-sm-4', 'maxlength' => '12', 'placeholder' => 'Price'])}}
-            </div>
             <div class="input-group">
                 {{Form::label('brand', 'Brand', ['class' => 'input-group-text col-sm-3 mb-2'])}}
                 {{Form::text('brand', '', ['class' => 'form-control mb-2', 'maxlength' => '20', 'placeholder' => 'Brand'])}}
@@ -26,6 +22,10 @@
             <div class="input-group">
                 {{Form::label('size', 'Size', ['class' => 'input-group-text col-sm-3 mb-2'])}}
                 {{Form::text('size', '', ['class' => 'form-control mb-2', 'maxlength' => '8', 'placeholder' => 'Size'])}}
+            </div>
+            <div class="input-group")>
+                {{Form::label('price', 'Price*', ['class' => 'input-group-text col-sm-3 mb-2'])}}
+                {{Form::text('price', '', ['class' => 'form-control mb-2 col col-sm-4', 'maxlength' => '12', 'placeholder' => 'Price'])}}
             </div>
             <div class="input-group">
                 {{Form::label('vendor', 'Vendor*', ['class' => 'input-group-text col-sm-3 mb-2'])}}
