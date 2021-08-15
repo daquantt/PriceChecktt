@@ -9,7 +9,7 @@
             
             <div class="input-group">
                 {{Form::label('date', 'Date of Price*', ['class' => 'input-group-text col-sm-3 mb-2'])}}
-                {{Form::date('price_date', '', ['class' => 'form-control mb-2', 'placeholder' => 'Date of Price'])}}
+                {{Form::date('price_date', \Carbon\Carbon::now(-4), ['class' => 'form-control mb-2', 'placeholder' => 'Date of Price'])}}
             </div>
             <div class="input-group">
                 {{Form::label('title', 'Item*', ['class' => 'input-group-text col-sm-3 mb-2'])}}

@@ -113,7 +113,7 @@ class PostsController extends Controller
     public function search(Request $request)
     {
         $search = $request->get('search');
-        $posts = Post::where('title', 'LIKE', '%' . $search . '%')->orderBy('price_date', 'desc')->paginate(25);
+        $posts = Post::where('title', 'LIKE', '%' . $search . '%')->orderBy('price_date', 'desc')->paginate(25)->withQueryString();
 
         return view('posts.search')->with('posts', $posts);
     }
