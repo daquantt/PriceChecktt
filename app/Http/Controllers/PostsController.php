@@ -112,8 +112,21 @@ class PostsController extends Controller
 
     public function search(Request $request)
     {
+        // $search = $request->get('search');
+        // $posts = Post::where('title', 'LIKE', '%' . $search . '%')->orderBy('price_date', 'desc')->paginate(25)->withQueryString();
+
+        // return view('posts.search')->with('posts', $posts);
+        
+        
         $search = $request->get('search');
-        $posts = Post::where('title', 'LIKE', '%' . $search . '%')->orderBy('price_date', 'desc')->paginate(25)->withQueryString();
+        // split on 1+ whitespace & ignore empty (eg. trailing space)
+        $searchValues = preg_split('/\s+/', $search, -1, PREG_SPLIT_NO_EMPTY); 
+
+        $posts = Post::where(function ($q) use ($searchValues) {
+            foreach ($searchValues as $value) {
+            $q->orWhere('title', 'like', "%{$value}%");
+            }
+        })->orderBy('price_date', 'desc')->paginate(25)->withQueryString();
 
         return view('posts.search')->with('posts', $posts);
     }

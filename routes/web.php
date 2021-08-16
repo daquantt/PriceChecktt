@@ -34,4 +34,3 @@ Route::get('/dashsearch', [App\Http\Controllers\DashboardController::class, 'sea
 Route::post('/posts/{post}/likes', [App\Http\Controllers\PostLikeController::class, 'store'])->name('posts.likes');
 Route::delete('/posts/{post}/likes', [App\Http\Controllers\PostLikeController::class, 'destroy'])->name('posts.likes');
 
-
