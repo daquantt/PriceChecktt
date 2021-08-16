@@ -124,7 +124,7 @@ class PostsController extends Controller
 
         $posts = Post::where(function ($q) use ($searchValues) {
             foreach ($searchValues as $value) {
-            $q->orWhere('title', 'like', "%{$value}%");
+            $q->where('title', 'like', "%{$value}%");
             }
         })->orderBy('price_date', 'desc')->paginate(25)->withQueryString();
 
