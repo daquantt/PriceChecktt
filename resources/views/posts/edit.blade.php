@@ -39,6 +39,9 @@
                 {{Form::label('comment', 'Comments', ['class' => 'input-group-text col-sm-3 mb-2'])}}
                 {{Form::textarea('comment', $post->comment, ['class' => 'form-control mb-2', 'rows' => '1', 'maxlength' => '1000', 'placeholder' => 'Additional information'])}}
             </div>
+            
+            <small>Created on {{$post->created_at}}</small>
+            <hr>
                         
             {{Form::hidden('_method', 'PUT')}}
             {{Form::submit('Upload', ['class' => 'btn btn-primary  text-light'])}}

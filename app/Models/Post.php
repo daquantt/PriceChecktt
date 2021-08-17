@@ -5,13 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\User;
-use Laravel\Scout\Searchable;
 
 
 class Post extends Model
 {
     use HasFactory;
-    use Searchable;
     
     // By default table name is plural of class above ie posts. If you want to change the Table Name 
     protected $table = 'posts';
