@@ -10,7 +10,7 @@
         @endauth
         <form action="/search" method="GET" class="ms-auto col-8 col-sm-4">
             <div class="input-group">
-                <input name="search" class="form-control" type="search" placeholder="Search Products" aria-label="Search">
+                <input name="search" class="form-control" type="search" placeholder="Search Items" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Search</button>
             </div>
         </form>

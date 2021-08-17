@@ -24,7 +24,7 @@
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <li><a class="dropdown-item" href="/about">About Us</a></li>
-                    <li><a class="dropdown-item" href="/points">Point System</a></li>
+                    <li><a class="dropdown-item" href="/faq">FAQ</a></li>
                     <li><a class="dropdown-item" href="/contact">Contact</a></li>
                   </ul>
               </li>
@@ -70,4 +70,4 @@
             </ul>
         </div>
     </div>
-  </nav>
+</nav>

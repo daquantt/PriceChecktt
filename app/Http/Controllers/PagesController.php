@@ -24,10 +24,9 @@ class PagesController extends Controller
         return view('pages.about')->with('title', $title);
     }
 
-    public function points()
+    public function faq()
     {
-        $title = 'Point System';
-        return view('pages.points')->with('title', $title);
+        return view('pages.faq');
     }
 
 }

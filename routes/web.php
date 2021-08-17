@@ -20,7 +20,7 @@ Auth::routes(['verify' => true]);
 Route::get('/', [App\Http\Controllers\PagesController::class, 'index']);
 Route::get('/about', [App\Http\Controllers\PagesController::class, 'about']);
 Route::get('/contact', [App\Http\Controllers\PagesController::class, 'contact']);
-Route::get('/points', [App\Http\Controllers\PagesController::class, 'points']);
+Route::get('/faq', [App\Http\Controllers\PagesController::class, 'faq']);
 
 Route::resource('posts', 'App\Http\Controllers\PostsController');
 Route::get('/search', [App\Http\Controllers\PostsController::class, 'search']);

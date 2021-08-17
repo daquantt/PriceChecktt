@@ -15,7 +15,7 @@
         <div class="row mb-3 justify-content-center">
             <form action="/search" method="GET" class="col-sm-6">
                 <div class="input-group">
-                    <input name="search" class="form-control" type="search" placeholder="Search Products" aria-label="Search">
+                    <input name="search" class="form-control" type="search" placeholder="Enter your search here" aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Search</button>
                 </div>
             </form>

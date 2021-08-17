@@ -4,7 +4,10 @@
     <br>
     <h2 class="text-center">Contact</h2>
     
-    <p>Email: info@pricechecktt.com</p>
-
+    <div class="d-flex justify-content-center">
+        <div class="col-md-8">
+            <p>Email: info@pricechecktt.com</p>
+        </div>
+    </div>
 
 @endsection
